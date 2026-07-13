@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #FAF1E3;
+  --cream-dark: #f5ead6;
+  --brown-dark: #95723933;
+  --brown: #957139;
+  --brown-light: #8d6e63;
+  --brown-border: #a1887f;
+  --orange-bg: #eeb390;
+  --orange-dot: #e89271;
+  --orange-border: #d4956f;
+  --yellow-bg: #f9e9b6;
+  --yellow-dot: #f2e2b1;
+  --yellow-border: #e8d48a;
+  --teal-bg: #a4c3c2;
+  --teal-dot: #7db1b1;
+  --teal-border: #8ab5b4;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-brown: var(--brown);
+  --color-brown-light: var(--brown-light);
+  --color-brown-dark: var(--brown-dark);
+  --color-brown-border: var(--brown-border);
+  --color-orange-bg: var(--orange-bg);
+  --color-orange-dot: var(--orange-dot);
+  --color-yellow-bg: var(--yellow-bg);
+  --color-yellow-dot: var(--yellow-dot);
+  --color-teal-bg: var(--teal-bg);
+  --color-teal-dot: var(--teal-dot);
+  --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-lora);
+  --font-inria-serif: var(--font-inria-serif);
+  --font-inter: var(--font-inter);
+}
+
+body {
+  background: var(--cream);
+  color: var(--brown);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--brown-light);
+  opacity: 0.7;
+}
+
+.note-editor-title::placeholder,
+.note-editor-content::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+.auth-input::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+.note-card-title {
+  overflow-wrap: break-word;
+}
+
+.note-card-title-clamp-5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note-card-content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  font-size: 12px;
+  line-height: 1.625;
+}
+
+.note-card-content-clamp-2 {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  height: calc(12px * 1.625 * 2);
+  flex-shrink: 0;
+}
+
+.note-card-content-clamp-6 {
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  min-height: 0;
+}
